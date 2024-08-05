@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Absensi Pegawai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Data Absensi Pegawai</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Waktu Absen</th>
+            <th>Divisi</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td data-label="ID">{{ row[0] }}</td>
+            <td data-label="Nama">{{ row[1] }}</td>
+            <td data-label="Email">{{ row[2] }}</td>
+            <td data-label="Waktu Absen">{{ row[3] }}</td>
+            <td data-label="Divisi">{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Kembali ke Form Absensi</a>
+</body>
+</html>

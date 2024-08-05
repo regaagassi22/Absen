@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Pegawai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Form Absensi GDE</h1>
+    <form action="/" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="divisi">Divisi:</label>
+        <input type="text" id="divisi" name="divisi" required>
+        
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/data">Lihat Data Absensi</a>
+</body>
+</html>
